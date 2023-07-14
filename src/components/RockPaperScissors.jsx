@@ -35,10 +35,19 @@ const RockPaperScissors = () => {
             <div className="game">
                 <div className="choices">
                     <button className="choice" onClick={()=>playGame('rock')}>
-                        <img src="" alt="" />
+                        <img src="./Assets/rocks.png" alt="rock" />
+                    </button>
+                    <button className="choice" onClick={()=>playGame('paper')}>
+                        <img src="./Assets/paper.png" alt="paper" />
+                    </button>
+                    <button className="choice" onClick={()=>playGame('scissor')}>
+                        <img src="./Assets/scissors.png" alt="scissor" />
                     </button>
                 </div>
+                <div id="result">{result}</div>
             </div>
         </div>
-    )
-}
+    );
+};
+
+export default RockPaperScissors;

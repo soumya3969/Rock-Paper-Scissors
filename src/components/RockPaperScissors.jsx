@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './RockPaperScissors.css';
+import paperImage from '../Assets/paper.png';
+import rocksImage from '../Assets/rocks.png';
+import cutImage from '../Assets/cut.png';
 const RockPaperScissors = () => {
     const choices = ['rock', 'paper', 'scissors'];
     const [result, setResult] = useState('');
@@ -22,26 +25,26 @@ const RockPaperScissors = () => {
         setResult(
             <>
                 Your Choice: {userChoice}
-                <br/>
+                <br />
                 Computer's Choice: {computerChoice}
-                <br/>
+                <br />
                 {resultText}
             </>
         );
     };
-    return(
+    return (
         <div>
             <h1>Rock Paper Scissors</h1>
             <div className="game">
                 <div className="choices">
-                    <button className="choice" onClick={()=>playGame('rock')}>
-                        <img src="./Assets/rocks.png" alt="rock" />
+                    <button className="choice" onClick={() => playGame('rock')}>
+                        <img src={rocksImage} alt="rock" />
                     </button>
-                    <button className="choice" onClick={()=>playGame('paper')}>
-                        <img src="./Assets/paper.png" alt="paper" />
+                    <button className="choice" onClick={() => playGame('paper')}>
+                        <img src={paperImage} alt="paper" />
                     </button>
-                    <button className="choice" onClick={()=>playGame('scissor')}>
-                        <img src="./Assets/scissors.png" alt="scissor" />
+                    <button className="choice" onClick={() => playGame('scissor')}>
+                        <img src={cutImage} alt="scissor" />
                     </button>
                 </div>
                 <div id="result">{result}</div>
